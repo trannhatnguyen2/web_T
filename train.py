@@ -39,7 +39,7 @@ def seed_everything(seed_value):
 
 def parser_opt():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data_path', type=str, default='./data/data_segment.csv')
+    parser.add_argument('--data_path', type=str, default='./data/dataset_agoda.csv')
     parser.add_argument('--batch_size', type=int, default=8)
     parser.add_argument('--accumulation_steps', type=int, default=5)
     parser.add_argument('--epochs', type=int, default=5)
