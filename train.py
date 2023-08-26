@@ -158,7 +158,7 @@ if __name__ == '__main__':
             train(model,criterion,optimizer, train_loader)
             val_acc = eval(model=model, criterion= criterion, valid_loader= valid_loader)
 
-            if not os.path.exist('ckpt'):
+            if not os.path.exists('ckpt'):
                 os.mkdir('ckpt')
             if val_acc > best_acc:
                 torch.save(model.state_dict(), f'./ckpt/phobert_fold{fold+1}.pth')
